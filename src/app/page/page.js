@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <main>
-      Page
+      Page 2
     </main>
   )
 }
