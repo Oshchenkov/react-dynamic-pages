@@ -1,5 +1,7 @@
 export default function Component1() {
-  return <>
-    Comp 1
-  </>;
+  return (
+    <>
+      <div>Comp 1</div>
+    </>
+  );
 }

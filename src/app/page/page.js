@@ -1,8 +1,17 @@
+'use client';
+
+import Component1 from "@/components/comp1";
+import Component2 from "@/components/comp2";
 
 export default function Home() {
   return (
-    <main>
+    <div>
       Page 2
-    </main>
+
+      <Component1/>
+      <Component2>
+        sdfsdf
+      </Component2>
+    </div>
   )
 }

@@ -13,6 +13,7 @@ const dynamicCompoList = [
   { name: "comp3", key: "3" },
   { name: "comp1", key: "1" },
 ];
+console.log("🚀 ~ dynamicCompoList:", dynamicCompoList);
 
 export default function Dynamic(ctx) {
   console.log(ctx);
@@ -31,7 +32,8 @@ export default function Dynamic(ctx) {
     console.log(`${key}, ${value}`);
   }
 
-  let url = params.dynamic || "comp1";
+  console.log("dyn", params.dynamic);
+  let url = "comp1";
 
   const DynamicComp1 = lazy(() =>
     delayForDemo(import(`../../components/${url}`), {
@@ -63,7 +65,7 @@ export default function Dynamic(ctx) {
             {dynamicCompoList.map((comp) => {
               return createElement(
                 dynamic(() => import(`../../components/${comp.name}`), {
-                  ssr: false,
+                  ssr: true,
                   loading: () => <p>Loading...my</p>,
                 }),
                 { key: comp.key }
